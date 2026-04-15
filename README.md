@@ -1,18 +1,3 @@
-| Integration Pipeline | End-to-end order flow | Validate data, call API, log outcomes, split success/failed records |
-
-### 4. Config Management
----
-
-### 5. End-to-End Order Integration Flow
-**Problem:** Incoming order data needs to be validated, sent to an external system, and split into successful and failed records for follow-up.
-
-**Solution:** Built a single-script integration pipeline that reads CSV input, applies 6 validation rules, sends valid orders to an API, logs all outcomes and writes success and failed records to separate output files.
-
-**Output:** 2 orders processed successfully, 6 failures detected across three categories – validation error, integration error and system error.
-
-![Integration pipeline output](Skärmbild%202026-04-15%20152826.png)
-
-
 # 🛠️ Technical Portfolio – Application Specialist
 
 ## Why this matters for an Application Specialist
@@ -136,3 +121,17 @@ All scripts have been run and verified locally. See [RESULTS.md](./RESULTS.md) f
 ---
 
 *Built to demonstrate practical technical skills relevant to an Application Specialist role.*
+
+| Integration Pipeline | End-to-end order flow | Validate data, call API, log outcomes, split success/failed records |
+
+### 4. Config Management
+---
+
+### 5. End-to-End Order Integration Flow
+**Problem:** Incoming order data needs to be validated, sent to an external system, and split into successful and failed records for follow-up.
+
+**Solution:** Built a single-script integration pipeline that reads CSV input, applies 6 validation rules, sends valid orders to an API, logs all outcomes and writes success and failed records to separate output files.
+
+**Output:** 2 orders processed successfully, 6 failures detected across three categories – validation error, integration error and system error.
+
+![Integration pipeline output](Skärmbild%202026-04-15%20152826.png)
