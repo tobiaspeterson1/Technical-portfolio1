@@ -1,0 +1,9 @@
+order_id,customer_id,email,amount,currency,order_date
+1001,C001,anna.svensson@example.com,1299.00,SEK,2026-04-15
+1002,C002,erik.lindgrenexample.com,459.50,SEK,2026-04-15
+1003,C003,maria.nilsson@example.com,-50.00,EUR,2026-04-15
+1004,C004,johan.karlsson@example.com,8750.00,USD,2026-04-15
+1005,C005,sara.eriksson@example.com,299.00,SEK,2026-04-15
+1006,C006,lars.petersson@example.com,199.00,SEK,2026-04-15
+1007,C007,karin.andersson@example.com,550.00,GBP,2026-04-15
+1008,C008,peter.lindqvist@example.com,3200.00,SEK,15-04-2026
