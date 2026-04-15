@@ -1,0 +1,7 @@
+order_id,customer_name,amount,status,carrier
+1001,Anna Svensson,1299.00,delivered,DHL
+1002,Erik Lindgren,459.50,shipped,PostNord
+1003,Maria Nilsson,,pending,DHL
+1004,Johan Karlsson,8750.00,delivered,UPS
+1005,Sara Eriksson,299.00,delivered,PostNord
+1006,Lars Petersson,OGILTIG,shipped,DHL
