@@ -1,75 +1,115 @@
-# 🛠️ Technical Portfolio – Application Specialist Skills
+# 🛠️ Technical Portfolio – Application Specialist
 
-Detta repo demonstrerar tekniska färdigheter inom fyra nyckelområden relevanta för rollen som **Applikationsspecialist**.
+## Why this matters for an Application Specialist
 
----
+An Application Specialist bridges customers and developers — configuring systems, validating integrations, testing solutions and troubleshooting data flows. Every project in this portfolio reflects exactly that:
 
-## 📁 Projektöversikt
-
-### 1. SQL – Databashantering
-📂 `sql-queries/sql_demo.py`
-
-Skriver SQL-queries mot en SQLite-databas med simulerad verksamhetsdata (kunder, ordrar, produkter). Visar förmågan att analysera, filtrera och aggregera data på ett strukturerat sätt.
-
-**Tekniker:** SQLite, SELECT, JOIN, GROUP BY, subqueries, aggregering
+| Project | Skill demonstrated | Why it matters |
+|---|---|---|
+| SQL | Query, filter and aggregate data | Analyse delivery data, debug integrations, find anomalies |
+| API Testing | Validate REST APIs automatically | Verify carrier integrations return correct data and handle errors |
+| Batch Job | Automate file processing with logging | Process high-volume delivery data, catch and log failures |
+| Config Management | Handle YAML, .env and secrets | Configure and deploy solutions across environments |
 
 ---
 
-### 2. API-integration & Testning
-📂 `api-testing/test_api.py`
+## 📁 Projects
 
-Strukturerade automatiserade tester av ett externt REST API. Inkluderar statuskodvalidering, schema-kontroll och felscenarier – precis som en Applikationsspecialist gör i praktiken.
+### 1. SQL – Data Analysis
+**Problem:** Need to extract and analyse order data across multiple related tables.
 
-**Tekniker:** Python, pytest, requests, JSON-validering, felhantering
+**Solution:** Built a SQLite database simulating an e-commerce system with customers, orders, products and order lines. Wrote five SQL queries covering JOIN, GROUP BY, subqueries and aggregation.
 
----
+**Output:** Structured query results showing top customers by revenue, best-selling products and returning customers.
 
-### 3. Scripts & Batchjobbhantering
-📂 `batch-scripts/batch_job.py`
-
-Automatiserade Python-scripts som körs schemalagt: filbearbetning, loggning och felhantering. Simulerar verkliga batchjobb i en integrationsmiljö.
-
-**Tekniker:** Python, schemaläggning, loggning, filhantering, CSV/JSON
+```
+sql-queries/
+└── sql_demo.py        ← Run queries against local SQLite database
+```
 
 ---
 
-### 4. Teknisk Konfiguration
-📂 `config-management/config_manager.py`
+### 2. API Testing – Integration Validation
+**Problem:** Need to verify that a REST API returns correct data, handles errors and meets performance requirements.
 
-Hanterar applikationskonfiguration via YAML och `.env`-filer. Visar hur man separerar konfiguration från kod och tolkar tekniska integrationsspecifikationer.
+**Solution:** Built structured automated tests using pytest — covering status codes, schema validation, negative test cases and response time.
 
-**Tekniker:** YAML, miljövariabler, .env-filer, uppstartsvalidering
+**Output:** 17/17 tests passed. Covers GET, POST, PUT, DELETE and parametrised schema checks.
+
+```
+api-testing/
+└── test_api.py        ← Run: pytest api-testing/ -v
+```
 
 ---
 
-## 🚀 Kom igång
+### 3. Batch Job – Automated File Processing
+**Problem:** Need to automatically process incoming data files, validate content, log errors and archive processed files.
+
+**Solution:** Built a Python batch script that reads CSV files from an inbox, validates each row, saves clean data as JSON to an outbox, logs all errors with row and reason, and produces a job summary.
+
+**Output:** 3 files processed, 5 valid rows saved, 2 invalid rows detected and logged — without crashing.
+
+```
+batch-scripts/
+├── batch_job.py       ← Main script
+├── inbox/             ← Incoming CSV files
+├── outbox/            ← Processed JSON output
+├── logs/              ← Timestamped log files
+└── archive/           ← Processed originals
+```
+
+---
+
+### 4. Config Management – Technical Configuration
+**Problem:** Need to manage application settings across environments without hardcoding sensitive values in source code.
+
+**Solution:** Built a configuration system that loads settings from YAML and secrets from environment variables, validates all values on startup and masks sensitive data in logs.
+
+**Output:** Config loaded and validated successfully. Missing environment variables caught and reported correctly.
+
+```
+config-management/
+├── config_manager.py  ← Main script
+└── env.example        ← Template for local environment variables
+```
+
+---
+
+## 🚀 Getting Started
 
 ```bash
-# Klona repot
-git clone https://github.com/tobiaspeterson1/Technical-portfolio.git
-cd Technical-portfolio
+# Clone the repo
+git clone https://github.com/tobiaspeterson1/Technical-portfolio1.git
+cd Technical-portfolio1
 
-# Installera beroenden
+# Install dependencies
 pip install -r requirements.txt
 
-# Kör API-testerna
-pytest api-testing/ -v
-
-# Kör SQL-demo
+# Run SQL demo
 python sql-queries/sql_demo.py
 
-# Kör batchjobb
+# Run API tests
+pytest api-testing/ -v
+
+# Run batch job
 python batch-scripts/batch_job.py
 
-# Kör konfigurationsDemo
+# Run config demo
 python config-management/config_manager.py
 ```
 
-## 📋 Krav
+## 📋 Requirements
 
 - Python 3.10+
-- pip (pakethanterare)
+- pip
 
 ---
 
-*Portfolio byggt för att visa praktisk teknisk kompetens inom applikationsspecialistarbete.*
+## ✅ Test Results
+
+All scripts have been run and verified locally. See [RESULTS.md](./RESULTS.md) for full output.
+
+---
+
+*Built to demonstrate practical technical skills relevant to an Application Specialist role.*
