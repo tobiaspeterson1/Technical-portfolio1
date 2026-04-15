@@ -22,7 +22,16 @@ orders.csv
 
 ---
 
-## Why this matters ## Flow
+## Why this matters
+
+<img width="1472" height="1126" alt="image" src="https://github.com/user-attachments/assets/84e330c8-239a-4cbf-a28e-087c2c70c821" />
+
+
+## Flow
+
+orders.csv → [Validate] → pass → [Send to API] → 201 → [Log] → [Write output]
+                       ↘ fail                  ↘ 400/500
+                              ↘ failed_records.csv ↙
 
 | Skill | Where it's shown |
 |---|---|
