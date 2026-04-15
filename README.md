@@ -22,6 +22,8 @@ An Application Specialist bridges customers and developers — configuring syste
 
 **Output:** Structured query results showing top customers by revenue, best-selling products and returning customers.
 
+![SQL output](Skärmbild%202026-04-15%20145753.png)
+
 ```
 sql-queries/
 └── sql_demo.py        ← Run queries against local SQLite database
@@ -36,6 +38,8 @@ sql-queries/
 
 **Output:** 17/17 tests passed. Covers GET, POST, PUT, DELETE and parametrised schema checks.
 
+![API test results](Skärmbild%202026-04-15%20145937.png)
+
 ```
 api-testing/
 └── test_api.py        ← Run: pytest api-testing/ -v
@@ -49,6 +53,8 @@ api-testing/
 **Solution:** Built a Python batch script that reads CSV files from an inbox, validates each row, saves clean data as JSON to an outbox, logs all errors with row and reason, and produces a job summary.
 
 **Output:** 3 files processed, 5 valid rows saved, 2 invalid rows detected and logged — without crashing.
+
+![Batch job output](Skärmbild%202026-04-15%20150053.png)
 
 ```
 batch-scripts/
@@ -67,6 +73,8 @@ batch-scripts/
 **Solution:** Built a configuration system that loads settings from YAML and secrets from environment variables, validates all values on startup and masks sensitive data in logs.
 
 **Output:** Config loaded and validated successfully. Missing environment variables caught and reported correctly.
+
+![Config output](Skärmbild%202026-04-15%20150153.png)
 
 ```
 config-management/
