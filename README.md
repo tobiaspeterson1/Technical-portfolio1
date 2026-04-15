@@ -83,7 +83,7 @@ config-management/
 ```
 | Integration Pipeline | End-to-end order flow | Validate data, call API, log outcomes, split success/failed records |
 
-### 4. Config Management
+
 ---
 
 ### 5. End-to-End Order Integration Flow
