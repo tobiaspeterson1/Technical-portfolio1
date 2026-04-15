@@ -23,7 +23,7 @@ An Application Specialist bridges customers and developers — configuring syste
 
 **Output:** Structured query results showing top customers by revenue, best-selling products and returning customers.
 
-![SQL output](docs/screenshots/sql_output.png)
+!![SQL output](docs/screenshots/sql_output.png)
 
 ```
 sql-queries/
@@ -39,7 +39,7 @@ sql-queries/
 
 **Output:** 17/17 tests passed. Covers GET, POST, PUT, DELETE and parametrised schema checks.
 
-![API test results](docs/screenshots/api_tests.png)
+![API tests](docs/screenshots/api_tests.png)
 
 ```
 api-testing/
@@ -55,7 +55,7 @@ api-testing/
 
 **Output:** 3 files processed, 5 valid rows saved, 2 invalid rows detected and logged — without crashing.
 
-![Batch job output](docs/screenshots/batch_logs.png)
+![Batch output](docs/screenshots/batch_output.png)
 
 ```
 batch-scripts/
@@ -92,7 +92,7 @@ config-management/
 
 **Output:** 2 orders processed successfully, 6 failures detected across three categories – validation error, integration error and system error.
 
-![Integration pipeline output](docs/screenshots/integration_output.png)
+![Integration output](docs/screenshots/integration_output.png)
 
 ```
 order-integration-flow/
