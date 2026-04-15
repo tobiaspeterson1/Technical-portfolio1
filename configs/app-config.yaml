@@ -1,0 +1,29 @@
+# Application Configuration Template
+# Sensitive values (passwords, API keys) are NEVER stored here.
+# They are read from environment variables or .env files.
+
+environment: production
+log_level: INFO
+
+database:
+  host: db.internal.company.se
+  port: 5432
+  name: app_production
+  user: app_user
+  # password loaded from DB_PASSWORD environment variable
+
+api:
+  base_url: https://api.partner.se/v2
+  timeout_sec: 30
+  max_retries: 3
+  # api_key loaded from API_KEY environment variable
+
+batch_job:
+  schedule_cron: "0 6 * * 1-5"   # Weekdays at 06:00
+  inbox_path: /data/integration/inbox
+  outbox_path: /data/integration/outbox
+  max_file_size_mb: 50
+  allowed_extensions:
+    - .csv
+    - .json
+    - .xml
