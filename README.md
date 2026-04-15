@@ -10,6 +10,7 @@ An Application Specialist bridges customers and developers — configuring syste
 | API Testing | Validate REST APIs automatically | Verify carrier integrations return correct data and handle errors |
 | Batch Job | Automate file processing with logging | Process high-volume delivery data, catch and log failures |
 | Config Management | Handle YAML, .env and secrets | Configure and deploy solutions across environments |
+| Integration Pipeline | End-to-end order flow | Validate data, call API, log outcomes, split success/failed records |
 
 ---
 
@@ -22,7 +23,7 @@ An Application Specialist bridges customers and developers — configuring syste
 
 **Output:** Structured query results showing top customers by revenue, best-selling products and returning customers.
 
-![SQL output](Skärmbild%202026-04-15%20145753.png)
+![SQL output](docs/screenshots/sql_output.png)
 
 ```
 sql-queries/
@@ -38,7 +39,7 @@ sql-queries/
 
 **Output:** 17/17 tests passed. Covers GET, POST, PUT, DELETE and parametrised schema checks.
 
-![API test results](Skärmbild%202026-04-15%20145937.png)
+![API test results](docs/screenshots/api_tests.png)
 
 ```
 api-testing/
@@ -54,7 +55,7 @@ api-testing/
 
 **Output:** 3 files processed, 5 valid rows saved, 2 invalid rows detected and logged — without crashing.
 
-![Batch job output](Skärmbild%202026-04-15%20150053.png)
+![Batch job output](docs/screenshots/batch_logs.png)
 
 ```
 batch-scripts/
@@ -74,15 +75,13 @@ batch-scripts/
 
 **Output:** Config loaded and validated successfully. Missing environment variables caught and reported correctly.
 
-![Config output](Skärmbild%202026-04-15%20150153.png)
+![Config output](docs/screenshots/config_output.png)
 
 ```
 config-management/
 ├── config_manager.py  ← Main script
 └── env.example        ← Template for local environment variables
 ```
-| Integration Pipeline | End-to-end order flow | Validate data, call API, log outcomes, split success/failed records |
-
 
 ---
 
@@ -93,7 +92,17 @@ config-management/
 
 **Output:** 2 orders processed successfully, 6 failures detected across three categories – validation error, integration error and system error.
 
-![Integration pipeline output](Skärmbild%202026-04-15%20152826.png)
+![Integration pipeline output](docs/screenshots/integration_output.png)
+
+```
+order-integration-flow/
+├── integration_pipeline.py   ← Full pipeline in one script
+├── input/orders.csv          ← 8 test orders, 3 failure scenarios
+├── output/success.csv        ← Successfully processed orders
+├── output/failed_records.csv ← Failed orders with reason and type
+└── logs/integration.log      ← Timestamped log per run
+```
+
 ---
 
 ## 🚀 Getting Started
@@ -117,6 +126,10 @@ python batch-scripts/batch_job.py
 
 # Run config demo
 python config-management/config_manager.py
+
+# Run integration pipeline
+cd order-integration-flow
+python integration_pipeline.py
 ```
 
 ## 📋 Requirements
@@ -133,5 +146,3 @@ All scripts have been run and verified locally. See [RESULTS.md](./RESULTS.md) f
 ---
 
 *Built to demonstrate practical technical skills relevant to an Application Specialist role.*
-
-
